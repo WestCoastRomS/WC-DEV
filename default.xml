@@ -18,6 +18,12 @@
            sync-j="16"
            revision="refs/tags/android-9.0.0_r47" />
 
+<remote    name="crdroid"
+           fetch="https://github.com/"
+           sync-c="true"
+           sync-j="16"
+           revision="refs/heads/9.0" />
+
   <remote  name="westcoastroms"
            fetch="https://gitlab.com/WestCoastRomS/wcroms-dev/"
            review="refs/tags/android-9.0.0_r47" />
@@ -29,7 +35,7 @@
 
   <!-- AOSP Projects -->
 
-  <project path="build/make" name="LineageOS/android_build" groups="pdk" >
+  <project path="build/make" name="LineageOS/android_build" groups="pdk" remote="crdroid" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -140,7 +146,7 @@
   <project path="external/flac" name="platform/external/flac" groups="pdk" remote="aosp" />
   <project path="external/flatbuffers" name="platform/external/flatbuffers" groups="pdk" remote="aosp" />
   <project path="external/fonttools" name="platform/external/fonttools" groups="pdk" remote="aosp" />
-  <project path="external/freetype" name="platform/external/freetype" groups="pdk" remote="aosp" />
+  <project path="external/freetype" name="platform/external/freetype" groups="pdk" remote="crdoid" />
   <project path="external/fsck_msdos" name="LineageOS/android_external_fsck_msdos" groups="pdk" remote="github"/>
   <project path="external/gemmlowp" name="platform/external/gemmlowp" groups="pdk" remote="aosp" />
   <project path="external/gflags" name="platform/external/gflags" groups="pdk" remote="aosp" />
@@ -178,7 +184,7 @@
   <project path="external/javassist" name="platform/external/javassist" groups="pdk" remote="aosp" />
   <project path="external/jcommander" name="platform/external/jcommander" groups="pdk" remote="aosp" />
   <project path="external/jdiff" name="platform/external/jdiff" groups="pdk" remote="aosp" />
-  <project path="external/jemalloc" name="platform/external/jemalloc" groups="pdk" remote="aosp" />
+  <project path="external/jemalloc" name="platform/external/jemalloc" groups="pdk" remote="crdroid" />
   <project path="external/jline" name="platform/external/jline" groups="pdk,tradefed,pdk-fs" remote="aosp" />
   <project path="external/jmdns" name="platform/external/jmdns" groups="pdk" remote="aosp" />
   <project path="external/jsilver" name="platform/external/jsilver" groups="pdk" remote="aosp" />
@@ -212,7 +218,7 @@
   <project path="external/libffi" name="platform/external/libffi" groups="pdk" remote="aosp" />
   <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" remote="aosp" />
   <project path="external/libhevc" name="LineageOS/android_external_libhevc" groups="pdk" />
-  <project path="external/libjpeg-turbo" name="platform/external/libjpeg-turbo" groups="pdk" remote="aosp" />
+  <project path="external/libjpeg-turbo" name="platform/external/libjpeg-turbo" groups="pdk" remote="crdroid" />
   <project path="external/libldac" name="platform/external/libldac" groups="pdk" remote="aosp" />
   <project path="external/libmicrohttpd" name="platform/external/libmicrohttpd" groups="pdk" remote="aosp" />
   <project path="external/libmojo" name="platform/external/libmojo" groups="pdk" remote="aosp" />
@@ -225,7 +231,7 @@
   <project path="external/libopus" name="platform/external/libopus" groups="pdk" remote="aosp" />
   <project path="external/libpcap" name="platform/external/libpcap" groups="pdk" remote="aosp" />
   <project path="external/libphonenumber" name="platform/external/libphonenumber" groups="pdk" remote="aosp" />
-  <project path="external/libpng" name="LineageOS/android_external_libpng" groups="pdk" remote="github" />
+  <project path="external/libpng" name="LineageOS/android_external_libpng" groups="pdk" remote="crdroid" />
   <project path="external/libtextclassifier" name="LineageOS/android_external_libtextclassifier" groups="pdk" />
   <project path="external/libunwind" name="platform/external/libunwind" groups="pdk" remote="aosp" />
   <project path="external/libunwind_llvm" name="platform/external/libunwind_llvm" groups="pdk" remote="aosp" />
@@ -306,7 +312,7 @@
   <project path="external/sfntly" name="platform/external/sfntly" groups="pdk,qcom_msm8x26" remote="aosp" />
   <project path="external/shaderc/spirv-headers" name="platform/external/shaderc/spirv-headers" groups="pdk" remote="aosp" />
   <project path="external/shflags" name="platform/external/shflags" groups="pdk" remote="aosp" />
-  <project path="external/skia" name="LineageOS/android_external_skia" groups="pdk,qcom_msm8x26" remote="github" />
+  <project path="external/skia" name="LineageOS/android_external_skia" groups="pdk,qcom_msm8x26" remote="crdroid" />
   <project path="external/skqp" name="platform/external/skqp" groups="cts" clone-depth="1" remote="aosp" />
   <project path="external/sl4a" name="platform/external/sl4a" groups="pdk" remote="aosp" />
   <project path="external/slf4j" name="platform/external/slf4j" groups="pdk" remote="aosp" />
@@ -316,7 +322,7 @@
   <project path="external/sonivox" name="platform/external/sonivox" groups="pdk" remote="aosp" />
   <project path="external/speex" name="platform/external/speex" groups="pdk" remote="aosp" />
   <project path="external/spirv-llvm" name="platform/external/spirv-llvm" groups="pdk" remote="aosp" />
-  <project path="external/sqlite" name="platform/external/sqlite" groups="pdk" remote="aosp" />
+  <project path="external/sqlite" name="platform/external/sqlite" groups="pdk" remote="crdroid" />
   <project path="external/squashfs-tools" name="platform/external/squashfs-tools" groups="pdk" remote="aosp" />
   <project path="external/strace" name="platform/external/strace" groups="pdk" remote="aosp" />
   <project path="external/stressapptest" name="platform/external/stressapptest" groups="pdk" remote="aosp" />
@@ -363,8 +369,8 @@
   <project path="external/zlib" name="LineageOS/android_external_zlib" groups="pdk" remote="github" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" remote="aosp" />
-  <project path="frameworks/av" name="LineageOS/android_frameworks_av" groups="pdk" remote="github" />
-  <project path="frameworks/base" name="LineageOS/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github" />
+  <project path="frameworks/av" name="LineageOS/android_frameworks_av" groups="pdk" remote="crdroid" />
+  <project path="frameworks/base" name="LineageOS/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" remote="aosp" />
@@ -375,7 +381,7 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk" remote="aosp" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" remote="github" />
+  <project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" remote="crdroid" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" remote="aosp" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/opt/car/services" name="platform/frameworks/opt/car/services" groups="pdk-fs" remote="aosp" />
