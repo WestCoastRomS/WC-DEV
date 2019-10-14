@@ -23,6 +23,10 @@
            sync-c="true"
            sync-j="16" />
 
+  <remote  name="westcoastroms"
+           fetch="https://github.com/"
+           revision="refs/tags/android-9.0.0_r47" />
+
   <remote  name="crdroid"
            fetch="https://github.com/"
            sync-c="true"
@@ -34,9 +38,6 @@
            sync-c="true"
            sync-j="16"
            revision="refs/heads/9.0" />
-
-  <remote  name="westcoastroms"
-           fetch="https://github.com/WestCoastRomS/"  />
 
   <!-- AOSP Projects -->
 
@@ -540,7 +541,7 @@
   <project path="tools/tradefederation/contrib" name="platform/tools/tradefederation/contrib" groups="pdk,tradefed" remote="aosp" />
   <project path="tools/tradefederation/core" name="platform/tools/tradefederation" groups="pdk,tradefed" remote="aosp" />
 
-  <include name="snippets/wcroms_default.xml" />
+  <include name="snippets/wcroms.xml" />
   <include name="snippets/extended.xml" />
   <include name="snippets/lineage.xml" />
 
