@@ -14,7 +14,7 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
-           sync-c="true"A
+           sync-c="true"
            sync-j="16"
            revision="refs/tags/android-9.0.0_r47" />
 
